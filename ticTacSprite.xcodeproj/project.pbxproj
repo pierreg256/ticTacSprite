@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2408B1CA9303B2BDBE814CD6 /* Pods_ticTacSprite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091C6D8B3B0800F6ACC63E27 /* Pods_ticTacSprite.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C8378F0A1BB9E7F700A9C7F4 /* BoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8378F091BB9E7F700A9C7F4 /* BoardController.swift */; settings = {ASSET_TAGS = (); }; };
 		C8A4E0131BB9BA1E00BDEC22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4E0121BB9BA1E00BDEC22 /* AppDelegate.swift */; };
 		C8A4E0151BB9BA1E00BDEC22 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C8A4E0141BB9BA1E00BDEC22 /* GameScene.sks */; };
 		C8A4E0171BB9BA1E00BDEC22 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4E0161BB9BA1E00BDEC22 /* GameScene.swift */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091C6D8B3B0800F6ACC63E27 /* Pods_ticTacSprite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticTacSprite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953622DBC9D291854DFF3E20 /* Pods-ticTacSprite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticTacSprite.release.xcconfig"; path = "Pods/Target Support Files/Pods-ticTacSprite/Pods-ticTacSprite.release.xcconfig"; sourceTree = "<group>"; };
+		C8378F091BB9E7F700A9C7F4 /* BoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardController.swift; sourceTree = "<group>"; };
 		C8A4E00F1BB9BA1E00BDEC22 /* ticTacSprite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticTacSprite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A4E0121BB9BA1E00BDEC22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A4E0141BB9BA1E00BDEC22 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		C8A4E0321BB9BA1E00BDEC22 /* ticTacSpriteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ticTacSpriteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A4E0361BB9BA1E00BDEC22 /* ticTacSpriteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticTacSpriteUITests.swift; sourceTree = "<group>"; };
 		C8A4E0381BB9BA1E00BDEC22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C8D9620862F859975EF933 /* Pods-ticTacSprite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticTacSprite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ticTacSprite/Pods-ticTacSprite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2408B1CA9303B2BDBE814CD6 /* Pods_ticTacSprite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26BEA979DA489D2A0A86E3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				091C6D8B3B0800F6ACC63E27 /* Pods_ticTacSprite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A3110D4202A4A30A3867909 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8D9620862F859975EF933 /* Pods-ticTacSprite.debug.xcconfig */,
+				953622DBC9D291854DFF3E20 /* Pods-ticTacSprite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C8A4E0061BB9BA1E00BDEC22 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +109,8 @@
 				C8A4E02A1BB9BA1E00BDEC22 /* ticTacSpriteTests */,
 				C8A4E0351BB9BA1E00BDEC22 /* ticTacSpriteUITests */,
 				C8A4E0101BB9BA1E00BDEC22 /* Products */,
+				2A3110D4202A4A30A3867909 /* Pods */,
+				26BEA979DA489D2A0A86E3AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +131,7 @@
 				C8A4E0141BB9BA1E00BDEC22 /* GameScene.sks */,
 				C8A4E0161BB9BA1E00BDEC22 /* GameScene.swift */,
 				C8A4E0181BB9BA1E00BDEC22 /* GameViewController.swift */,
+				C8378F091BB9E7F700A9C7F4 /* BoardController.swift */,
 				C8A4E01A1BB9BA1E00BDEC22 /* Main.storyboard */,
 				C8A4E01D1BB9BA1E00BDEC22 /* Assets.xcassets */,
 				C8A4E01F1BB9BA1E00BDEC22 /* LaunchScreen.storyboard */,
@@ -138,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8A4E03B1BB9BA1E00BDEC22 /* Build configuration list for PBXNativeTarget "ticTacSprite" */;
 			buildPhases = (
+				B3A90462CF8AF8F01EF72957 /* Check Pods Manifest.lock */,
 				C8A4E00B1BB9BA1E00BDEC22 /* Sources */,
 				C8A4E00C1BB9BA1E00BDEC22 /* Frameworks */,
 				C8A4E00D1BB9BA1E00BDEC22 /* Resources */,
+				B34CB3A84812A81C6CDC2394 /* Embed Pods Frameworks */,
+				04733160065BBA3256BC9C3C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,11 +287,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04733160065BBA3256BC9C3C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ticTacSprite/Pods-ticTacSprite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B34CB3A84812A81C6CDC2394 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ticTacSprite/Pods-ticTacSprite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A90462CF8AF8F01EF72957 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8A4E00B1BB9BA1E00BDEC22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8378F0A1BB9E7F700A9C7F4 /* BoardController.swift in Sources */,
 				C8A4E0171BB9BA1E00BDEC22 /* GameScene.swift in Sources */,
 				C8A4E0191BB9BA1E00BDEC22 /* GameViewController.swift in Sources */,
 				C8A4E0131BB9BA1E00BDEC22 /* AppDelegate.swift in Sources */,
@@ -402,6 +481,7 @@
 		};
 		C8A4E03C1BB9BA1E00BDEC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C8D9620862F859975EF933 /* Pods-ticTacSprite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = ticTacSprite/Info.plist;
@@ -413,6 +493,7 @@
 		};
 		C8A4E03D1BB9BA1E00BDEC22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953622DBC9D291854DFF3E20 /* Pods-ticTacSprite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = ticTacSprite/Info.plist;
