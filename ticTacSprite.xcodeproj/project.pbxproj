@@ -403,7 +403,7 @@
 		C8A4E03C1BB9BA1E00BDEC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = ticTacSprite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pgt.ticTacSprite;
@@ -414,7 +414,7 @@
 		C8A4E03D1BB9BA1E00BDEC22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = ticTacSprite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pgt.ticTacSprite;
@@ -491,6 +491,7 @@
 				C8A4E03D1BB9BA1E00BDEC22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8A4E03E1BB9BA1E00BDEC22 /* Build configuration list for PBXNativeTarget "ticTacSpriteTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +500,7 @@
 				C8A4E0401BB9BA1E00BDEC22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8A4E0411BB9BA1E00BDEC22 /* Build configuration list for PBXNativeTarget "ticTacSpriteUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +509,7 @@
 				C8A4E0431BB9BA1E00BDEC22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
