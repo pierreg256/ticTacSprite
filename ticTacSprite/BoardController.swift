@@ -102,6 +102,7 @@ public class BoardController: NSObject {
     }
     
     public func nextMoveForPlayer(player: Player) -> Position? {
+        //TODO: Find the IA algorythm I stored somewhere and code it here in Swift
         
         log.debug("")
         if _status != .Playable {

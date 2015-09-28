@@ -14,6 +14,7 @@ class GameScene: SKScene {
     let oTexture = SKTexture(imageNamed: "o")
     let xTexture = SKTexture(imageNamed: "x")
     
+    let boardNode = SKSpriteNode(imageNamed: "board")
     let log = XCGLogger.defaultInstance()
     let board = BoardController()
     var currentUser = Player.X
@@ -24,7 +25,6 @@ class GameScene: SKScene {
         
         
         // Setup the board
-        let boardNode = SKSpriteNode(imageNamed: "board")
         boardNode.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         let size = min(screenSize.width, screenSize.height)
         boardNode.size = CGSize(width:size, height:size)
@@ -86,6 +86,30 @@ class GameScene: SKScene {
         
     }
     
+    private func reset() -> Void {
+        board.clear()
+        for sprite in boardNode.children {
+            let btn = sprite as! SKSpriteNode
+            btn.texture = nil
+        }
+    }
+    
+    private func showMessage(message:String) -> Void {
+        let alert = UIAlertController(title: "Game Over!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (okSelected) -> Void in
+            self.log.debug("Ok Selected")
+            self.reset()
+        }
+        alert.addAction(okButton)
+        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            topController.presentViewController(alert, animated: true, completion: nil)
+            // topController should now be your topmost view controller
+        }
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
@@ -94,7 +118,6 @@ class GameScene: SKScene {
             let touchedNode = nodeAtPoint(location)
             
             if (touchedNode.name?.hasPrefix("btn") != nil){
-                print(touchedNode.name)
                 let coord:[String] = touchedNode.name!.componentsSeparatedByString("-")
                 let pos = Position(row:UInt8(coord[1])!, column:UInt8(coord[2])!)
                 let (success, message) = board.addMove(pos, user: currentUser)
@@ -107,24 +130,22 @@ class GameScene: SKScene {
                         sprite.texture = oTexture
                         currentUser = .X
                     }
-                    
+                    switch board.status {
+                    case .Playable:
+                        break
+                    case .Full:
+                        showMessage("Nobody won... try again!")
+                    default:
+                        if currentUser == .O {
+                            showMessage("The X's won... Hurray!")
+                        } else {
+                            showMessage("The O's won... Great!")
+                        }
+                    }
                 } else {
                     log.warning(message)
                 }
             }
-            //let sprite = SKSpriteNode(imageNamed:"x")
-            
-            //sprite.xScale = 0.5
-            //sprite.yScale = 0.5
-            //let mySize = min(screenSize.width, screenSize.height) / 3
-            //sprite.size = CGSize(width:mySize, height:mySize)
-            //sprite.position = location2
-            
-            //let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            //sprite.runAction(SKAction.repeatActionForever(action))
-            
-            //touchedNode.addChild(sprite)
         }
     }
    
