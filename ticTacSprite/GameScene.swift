@@ -9,20 +9,26 @@
 import SpriteKit
 import XCGLogger
 
+protocol GameSceneDelegate {
+    func gameScene(gameScene:GameScene, didSelectPosition:Position)
+}
+
 class GameScene: SKScene {
+    var gameController:GameSceneDelegate?
+    
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     let oTexture = SKTexture(imageNamed: "o")
     let xTexture = SKTexture(imageNamed: "x")
     
     let boardNode = SKSpriteNode(imageNamed: "board")
     let log = XCGLogger.defaultInstance()
-    let board = BoardController()
+    //let board = BoardController()
     var currentUser = Player.X
 
 
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        
+        self.backgroundColor = UIColor(red: 141/255, green: 141/255, blue: 141/255, alpha: 1.0)
         
         // Setup the board
         boardNode.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
@@ -87,27 +93,19 @@ class GameScene: SKScene {
     }
     
     private func reset() -> Void {
-        board.clear()
+        //board.clear()
         for sprite in boardNode.children {
             let btn = sprite as! SKSpriteNode
             btn.texture = nil
         }
     }
     
-    private func showMessage(message:String) -> Void {
-        let alert = UIAlertController(title: "Game Over!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (okSelected) -> Void in
-            self.log.debug("Ok Selected")
-            self.reset()
-        }
-        alert.addAction(okButton)
-        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
-            }
-            topController.presentViewController(alert, animated: true, completion: nil)
-            // topController should now be your topmost view controller
-        }
+    func presentBoardCellAt(position:Position, forUser:Player, animated:Bool) {
+        let btnName = "btn-\(position.row)-\(position.column)"
+        log.info("Trying to find: \(btnName)")
+        let node = boardNode.children.filter { $0.name == btnName }[0]
+        let sprite = node as! SKSpriteNode
+        sprite.texture = (forUser.isX ? xTexture : oTexture)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -120,7 +118,9 @@ class GameScene: SKScene {
             if (touchedNode.name?.hasPrefix("btn") != nil){
                 let coord:[String] = touchedNode.name!.componentsSeparatedByString("-")
                 let pos = Position(row:UInt8(coord[1])!, column:UInt8(coord[2])!)
-                let (success, message) = board.addMove(pos, user: currentUser)
+                gameController?.gameScene(self, didSelectPosition:pos)
+                
+                /*let (success, message) = board.addMove(pos, user: currentUser)
                 if success == true {
                     let sprite = touchedNode as! SKSpriteNode
                     if currentUser == .X {
@@ -132,7 +132,8 @@ class GameScene: SKScene {
                     }
                     switch board.status {
                     case .Playable:
-                        break
+                        //break
+                        log.debug("Next move is \(board.nextMoveForPlayer(currentUser))")
                     case .Full:
                         showMessage("Nobody won... try again!")
                     default:
@@ -144,10 +145,12 @@ class GameScene: SKScene {
                     }
                 } else {
                     log.warning(message)
-                }
+                }*/
             }
         }
     }
+    
+    
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */

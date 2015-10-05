@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2408B1CA9303B2BDBE814CD6 /* Pods_ticTacSprite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091C6D8B3B0800F6ACC63E27 /* Pods_ticTacSprite.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AC9107C41BBACBE2005240BB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9107C31BBACBE2005240BB /* GameController.swift */; settings = {ASSET_TAGS = (); }; };
 		C8378F0A1BB9E7F700A9C7F4 /* BoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8378F091BB9E7F700A9C7F4 /* BoardController.swift */; settings = {ASSET_TAGS = (); }; };
 		C8A4E0131BB9BA1E00BDEC22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4E0121BB9BA1E00BDEC22 /* AppDelegate.swift */; };
 		C8A4E0151BB9BA1E00BDEC22 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C8A4E0141BB9BA1E00BDEC22 /* GameScene.sks */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		091C6D8B3B0800F6ACC63E27 /* Pods_ticTacSprite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticTacSprite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953622DBC9D291854DFF3E20 /* Pods-ticTacSprite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticTacSprite.release.xcconfig"; path = "Pods/Target Support Files/Pods-ticTacSprite/Pods-ticTacSprite.release.xcconfig"; sourceTree = "<group>"; };
+		AC9107C31BBACBE2005240BB /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		C8378F091BB9E7F700A9C7F4 /* BoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardController.swift; sourceTree = "<group>"; };
 		C8A4E00F1BB9BA1E00BDEC22 /* ticTacSprite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticTacSprite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A4E0121BB9BA1E00BDEC22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				C8A4E0161BB9BA1E00BDEC22 /* GameScene.swift */,
 				C8A4E0181BB9BA1E00BDEC22 /* GameViewController.swift */,
 				C8378F091BB9E7F700A9C7F4 /* BoardController.swift */,
+				AC9107C31BBACBE2005240BB /* GameController.swift */,
 				C8A4E01A1BB9BA1E00BDEC22 /* Main.storyboard */,
 				C8A4E01D1BB9BA1E00BDEC22 /* Assets.xcassets */,
 				C8A4E01F1BB9BA1E00BDEC22 /* LaunchScreen.storyboard */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8378F0A1BB9E7F700A9C7F4 /* BoardController.swift in Sources */,
+				AC9107C41BBACBE2005240BB /* GameController.swift in Sources */,
 				C8A4E0171BB9BA1E00BDEC22 /* GameScene.swift in Sources */,
 				C8A4E0191BB9BA1E00BDEC22 /* GameViewController.swift in Sources */,
 				C8A4E0131BB9BA1E00BDEC22 /* AppDelegate.swift in Sources */,

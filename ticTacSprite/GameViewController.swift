@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
-            
+            scene.gameController = GameController()
             skView.presentScene(scene)
         
     }
@@ -51,5 +51,11 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    //MARK: - Game Methods methods
+    
+    func toto() -> Void {
+        //TODO: Fill in the gaps
     }
 }
